@@ -1,0 +1,20 @@
+<html>
+<body>
+<script language="javascript">
+var k1,k2,k3;
+k1=parseInt(Math.random()*100)+100;
+k2=prompt("猜猜我是谁");
+k3=parseInt(k2);
+while (k3!=k1)
+{
+if (k3>k1)
+{t="呵呵，你猜大了";}
+else
+{t="呵呵，你猜小了";}
+k2=prompt(t);
+k3=parseInt(k2);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+<input type="text" id="t1"></input>
+<input type="button" value="请输入一个值" onclick="pp()"></input>
+<script language="javascript">
+var m1,m2;
+mm();
+function mm()
+{
+m1=parseInt(Math.random()*100+200);
+m2=parseInt(Math.random()*100+200);
+document.write(m1);
+document.write("+");
+document.write(m2);
+}
+function pp()
+{
+var p1;
+p1=document.getElementById("t1");
+if (parseInt(p1.value)==m1+m2)
+{alert("呵呵，你真棒!");}
+else
+{alert("呵呵，你不棒!");}
+}
+
+</script>
+</body>
+</html>

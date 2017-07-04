@@ -1,0 +1,46 @@
+<html>
+<body>
+<form action="3.htm" method="post" id="q1" onsubmit="return pp()">
+用户名:<input type="text" id="a1"><br>
+密码:<input type="text" id="a2"><br>
+确认密码:<input type="text" id="a3"><br>
+身份证:<input type="text" id="a4"><br>
+邮箱:<input type="text" id="a5">
+<input type="submit" value="提交"><br>
+</form>
+<script language="javascript">
+var k1,k2,k3,k4,t;
+k1=document.getElementById("a1");
+k2=document.getElementById("a2");
+k3=document.getElementById("a3");
+k4=document.getElementById("a4");
+k5=document.getElementById("a5");
+function pp()
+{
+if (k1.value=="")
+{alert("请输入用户名");
+ return false;}
+if (k2.value=="")
+{alert("请输入密码");
+ return false;}
+if (k2.value!=k3.value)
+{alert("密码不一致");
+ return false;}
+if (isNaN(k4.value)==true)
+{alert("请输入合法身份证");
+ return false;}
+t=0;
+for (i=0;i<k5.value.length;i++)
+{if (k5.value.charAt(i)=="@")
+ {t=1;
+break;}
+}
+if (t==0)
+{alert("请输入合法邮箱");
+ return false;}
+return true;
+
+}
+</script>
+</body>
+</html>

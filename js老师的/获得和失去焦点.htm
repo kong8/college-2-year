@@ -1,0 +1,24 @@
+<html>
+<body>
+<from action="" method="post">
+<input type="text" name="a">
+<input type="text" name="b">
+<input type="button" value="获得焦点" onclick="pp1()">
+<input type="button" value="失去焦点" onclick="pp2()">
+</form>
+<script language="javascript">
+function pp1()
+{
+k=document.getElementsByName("b")[0];
+k.focus();
+}
+function pp2()
+{
+var k;
+k=document.getElementsByName("b")[0];
+k.blur();
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<body>
+<script language="javascript">
+function pp(mm)
+{t=0;
+ for(i=0;i<kk.length;i++)
+ {if (mm.charAt(i)=="@")
+  {t=1;
+   break;
+  } 
+  }
+ if (t==1)
+{document.write("呵呵，你输入的是合法邮箱");}
+ else
+{document.write("呵呵，你输入的是非法邮箱");}
+}
+var kk;
+kk=prompt("请输入合法邮箱");
+pp(kk);
+</script>
+</body>
+</html>

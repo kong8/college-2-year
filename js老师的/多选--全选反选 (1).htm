@@ -1,0 +1,44 @@
+<html>
+<body>
+<input type="checkbox" name="love">看书
+<input type="checkbox" name="love">打篮球
+<input type="checkbox" name="love">唱歌
+<input type="checkbox" name="love">听音乐
+<input type="checkbox" name="love">打游戏
+<input type="button" value="全选" onclick="pp1()">
+<input type="button" value="全不选" onclick="pp2()">
+<input type="button" value="反选" onclick="pp3()">
+<script language="javascript">
+function pp1()
+{
+var kk;
+kk=document.getElementsByName("love");
+for (i=0;i<kk.length;i++)
+{
+kk[i].checked=true;
+}
+}
+function pp2()
+{
+var kk;
+kk=document.getElementsByName("love");
+for (i=0;i<kk.length;i++)
+{
+kk[i].checked=false;
+}
+}
+function pp3()
+{
+var kk;
+kk=document.getElementsByName("love");
+for (i=0;i<kk.length;i++)
+{
+if (kk[i].checked==true)
+{kk[i].checked=false;}
+else
+{kk[i].checked=true;}
+}
+}
+</script>
+</body>
+</html>

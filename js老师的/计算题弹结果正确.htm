@@ -1,0 +1,27 @@
+<html>
+<body>
+第一个数<input type="text" id="t1"><br>
+第二个数<input type="text" id="t2"><br>
+结果<input type="text" id="t3"><br>
+<input type="submit" value="求和" onclick="pp()">
+<script language="javascript">
+var a,b,k1,k2,k3;
+a=parseInt(Math.random()*100);
+b=parseInt(Math.random()*100);
+k1=document.getElementById("t1");
+k2=document.getElementById("t2");
+k1.value=a;
+k2.value=b;
+function pp()
+{
+k3=document.getElementById("t3");
+if (parseInt(k3.value)==a+b)
+{
+alert("你很棒");}
+else
+{
+alert("你不棒");}
+}
+</script>
+</body>
+<html>
