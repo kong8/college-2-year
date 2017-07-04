@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>视频播放</title>
+<link rel="stylesheet" href="vplayer.css" type="text/css">
+<script>
+function anitVideo() {
+	var oWrap = document.getElementById("vwrap");
+	var oVideo = oWrap.getElementsByTagName("video")[0];
+	document.getElementById("zTime").innerHTML=
+	Math.floor(oVideo.duration)+"秒";
+	var bfBtn = document.getElementById("bfBtn");
+	var timer = null
+	bfBtn.addEventListener("click",playorpause,false);
+	}
+function playorpause() {
+	var oWrap = document.getElementById("vwrap");
+	var oVideo = oWrap.getElementsByTagName("video")[0];
+	if(oVideo.paused ||
+	    oVideo.ended) {
+	    oVideo.play();
+	    document.getElementById("bfBtn").innerHTML= "停止";
+	}else { 
+	    oVideo.pause();
+	    document.getElementById("bfBtn").innerHTML= "播放";}
+       
+	}
+	
+window.addEventListener("load",anitVideo,false)
+</script>
+</head>
+
+<body>
+    <div id="vwrap">
+        <video poster="images/riyuetan.jpg">
+            <source src="viodes/takemetoyourheart.mp4">
+            <source src="viodes/takemetoyourheart.webm">
+        </video>
+        <controls>
+            <div id="Btns">
+                <button id="bfBtn">播放</button>
+            </div>    
+            <div id="Bar">
+                <div id="jdBar"></div>
+            </div>
+            <div id="vtime">
+                <span id="dqTime">000秒</span><span>/</span><span id="zTime">000秒</span>
+            </div>
+        </controls>
+    </div>
+</body>
+</html>

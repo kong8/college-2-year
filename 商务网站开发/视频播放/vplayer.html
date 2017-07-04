@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>视频播放器</title>
+<link rel="stylesheet" type="text/css" href="vplayer.css">
+<script type="text/javascript">
+   function updateBar() {
+	 if(!oVideo.ended) {
+		document.getElementById("dqTime").innerHTML
+		= Math.floor( oVideo.currentTime ) + "秒" ;
+		document.getElementById("jdBar").style.width
+		= Math.floor( 400*(oVideo.currentTime/oVideo.duration) ) + "px";
+	  }else {
+	    document.getElementById("dqTime").innerHTML
+		= "000秒"  ;
+		document.getElementById("jdBar").style.width
+		= "1px";
+			 }  
+	   
+	}
+   function playorpause() {
+	  //alert("播放或暂停。");
+	  if ( oVideo.paused  ||oVideo.ended ) {
+		     oVideo.play();
+			 bfBtn.innerHTML = "停止";
+			 timer = setInterval( updateBar ,500)
+		  } else {
+			 oVideo.pause(); 
+			 bfBtn.innerHTML = "播放";
+		  }
+	 
+	
+   }
+
+
+   function initVideo() {
+	  //alert("页面加载了！");
+	   oVwrap = document.getElementById("vwrap");
+	   oVideo = oVwrap.getElementsByTagName("video")[0]; 
+	  // alert( oVideo.duration );  
+	  document.getElementById("zTime").innerHTML =
+	         Math.floor( oVideo.duration ) + "秒";
+	   bfBtn = document.getElementById("bfBtn");
+	   timer = null;
+	  bfBtn.addEventListener("click", playorpause ,false);
+    }
+
+   window.addEventListener("load", initVideo , false);
+</script>
+</head>
+
+<body>
+   <div id="vwrap">
+       <video poster="images/riyuetan.jpg">
+          <source src="videos/takemetoyourheart.webm">
+          <source src="videos/takemetoyourheart.mp4">
+       </video>
+       <controls>
+         <div id="Btns">
+            <button id="bfBtn">播放</button>
+         </div>
+         <div id="Bar">
+             <div id="jdBar"></div>
+         </div>
+         <div id="vTime">
+             <span id="dqTime">000秒</span>/<span id="zTime">000秒</span>
+         </div>
+       </controls>
+   </div>
+</body>
+</html>

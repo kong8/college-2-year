@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>浏览器窗口信息</title>
+<style type="text/css">
+   #div01 { width:150px; height:100px; background:#6F0;
+            position:absolute;
+			right:40px; }
+</style>
+<script type="text/javascript">
+    window.onload = 
+	   function () {
+		 // alert("页面加载了！");  
+		 // alert("当前浏览器窗口宽度为:" + window.innerWidth + "px,高度为" + window.innerHeight + "px。");
+		 //document.onclick = function ( e ) { alert( "(" + e.clientX + "," + e.clientY + ")");  } 
+		// alert("div框的左偏移为：" + document.getElementById("div01").offsetLeft +  "px,上偏移为：" + document.getElementById("div01").offsetTop + "px");
+		 setInterval(  ' document.getElementById("div01").style.left  = document.getElementById("div01").offsetLeft - 1 + "px"; ' , 50 );
+		}
+</script>
+</head>
+
+<body>
+    <div id="div01">
+    </div>
+</body>
+</html>

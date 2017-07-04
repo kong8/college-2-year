@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>分页选项卡</title>
+<style type="text/css">
+#wrap button { width:62px; height:33px; float:left;}
+#wrap div { width:245px; height:280px;
+             background:rgba(255,255,0,0.3);
+			 border:1px solid #888; border-radius:5px;			 
+             }
+#wrap p { font:16px/1.4em 微软雅黑; color:#333; 
+           text-indent:2em; letter-spacing:1px;
+		   margin:0px; padding:7px 3px 5px 7px;
+		  }
+.btnActive { background:rgba(0,255,0,.3);
+             font-weight:900;
+              color:#030;}
+.divShow { display:block;}
+.divHide { display:none;}
+</style>
+<script type="text/javascript">
+    function process(){
+		var oWrap = document.getElementById("wrap");
+		var oBtns =oWrap.getElementsByTagName("button");
+		var oDiv =oWrap.getElementsByTagName("div");
+		for (var i = 0;i < oBtns.length; i++) {
+			oBtns[i].className = "";
+			oDiv[i].className = "divHide";
+			}
+		}
+</script>
+</head>
+
+<body>
+    <div id="wrap">
+    <button onClick="process();
+                     this.className='btnActive';
+                     document.getElementById('b2b').className ='divShow'
+                     ">
+        B2B
+    </button>
+    <button onClick="process();
+                     this.className='btnActive';
+                     document.getElementById('b2c').className ='divShow' 
+                     ">
+        B2C
+    </button>
+    <button onClick="process();
+                     this.className='btnActive';
+                     document.getElementById('c2c').className ='divShow'
+                     ">
+        C2C
+    </button>
+    <button onClick="process();
+                     this.className='btnActive';
+                     document.getElementById('o2o').className ='divShow'
+                     ">
+        O2O
+    </button>
+        <div id="b2b" class="divShow">
+            <p>
+            对于“插入”选项卡上的库，在设计时都充分考虑了其中的项与文档整体外观的协调性。 您可以使用这些库来插入表格、页眉、页脚、列表、封面以及其他文档构建基块。 您创建的图片、图表或关系图也将与当前的文档外观协调一致。
+            </p>
+        </div>
+        <div id="b2c" class="divHide">
+            <p>
+            在“主页”选项卡上，通过从快速样式库中为所选文本选择一种外观，您可以方便地更改文档中所选文本的格式。 您还可以使用“主页”选项卡上的其他控件来直接设置文本格式。大多数控件都允许您选择是使用当前主题外观，还是使用某种直接指定的格式。
+            </p>
+        </div>
+        <div id="c2c" class="divHide">
+            <p>
+            若要更改文档的整体外观，请在“页面布局”选项卡上选择新的“主题”元素。若要更改快速样式库中的可用外观，请使用“更改当前快速样式集”命令。主题库和快速样式库都提供了重置命令，因而您总是能够将文档外观还原为当前模板所包含的原始外观。
+            </p>
+        </div>
+        <div id="o2o" class="divHide">
+            <p>
+            对于“插入”选项卡上的库，在设计时都充分考虑了其中的项与文档整体外观的协调性。 您可以使用这些库来插入表格、页眉、页脚、列表、封面以及其他文档构建基块。 您创建的图片、图表或关系图也将与当前的文档外观协调一致。
+            </p>
+        </div>
+    </div>
+</body>
+</html>

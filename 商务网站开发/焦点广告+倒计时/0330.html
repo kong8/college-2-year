@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>倒计时与焦点广告</title>
+<link rel="stylesheet" type="text/css" href="0330.css">
+<script type="text/javascript">
+    function dTime () {
+		   // document.write("调用了一次");
+		   var nowDate = new Date;
+		   var str ="当前时间是：";
+		   str += nowDate.toLocaleDateString();
+		   str += nowDate.toLocaleTimeString();
+		   var Date2018 =new Date(2018,0,1,0,0,0);
+		   var jiange = Date2018 - nowDate;
+		   str += "，距离2018年新年钟声敲响还有：";
+		   var Ss = Math.floor(jiange / 1000);
+		   var Ms = Math.floor( Ss / 60);
+		       Ss = Ss % 60;
+		   var Hs = Math.floor( Ms / 60);
+		       Ms = Ms % 60;
+		   var Ds = Math.floor( Hs /24 );
+		       Hs %= 24;
+		   str += ( Ds + "天");
+		   str += ( Hs + "小时");
+		   str += ( Ms + "分");
+		   str += Ss;
+		   str += "秒";
+		   document.getElementById("nTime").innerHTML = str;
+		  
+	    }
+    var timer01 =setInterval ("dTime()","1000");
+	window.onload =
+	     function () {
+		   var count = 1;
+		   var oImg = document.getElementById("ADimg");
+		   var oAd=document.getElementById("AD");
+		   var oA=oAd.getElementsByTagName("a")[0];
+		   oA.onmouseover=function () {
+		   document.getElementById("prev").className="showprev";
+		   document.getElementById("next").className="shownext";
+		   }
+		   oA.onmouseout=function () {
+		   document.getElementById("prev").className="hideprev";
+		   document.getElementById("next").className="hidenext";
+		   }
+		   document.getElementById("prev").onmouseover=function () {
+			   document.getElementById("prev").className="showprev";
+			   }
+		   document.getElementById("next").onmouseover=function () {
+			   document.getElementById("next").className="shownext";
+			   }
+		   var oLis=oAd.getElementsByTagName("li");
+		   oLis[0].onclick=function () {
+			   for (i=0;i<oLis.length;i++){
+			   oLis[i].style.backgroundColor="rgba(0,51,0,.3)";
+			   }
+			   oImg.src="images/ADs01.jpg";
+			   count=1;
+			   oLis[0].style.backgroundColor="rgba(153,255,0,.5)";
+			   };
+		   oLis[1].onclick=function () {
+			   for (i=0;i<oLis.length;i++){
+			   oLis[i].style.backgroundColor="rgba(0,51,0,.3)";
+			   }
+			   oImg.src="images/ADs02.jpg";
+			   count=2;
+			   oLis[1].style.backgroundColor="rgba(153,255,0,.5)";
+			   };
+		   oLis[2].onclick=function () {
+			   for (i=0;i<oLis.length;i++){
+			   oLis[i].style.backgroundColor="rgba(0,51,0,.3)";
+			   }
+			   oImg.src="images/ADs03.jpg";
+			   count=3;
+			   oLis[2].style.backgroundColor="rgba(153,255,0,.5)";
+			   };
+		   oLis[3].onclick=function () {
+			   for (i=0;i<oLis.length;i++){
+			   oLis[i].style.backgroundColor="rgba(0,51,0,.3)";
+			   }
+			   oImg.src="images/ADs04.jpg";
+			   count=4;
+			   oLis[3].style.backgroundColor="rgba(153,255,0,.5)";
+			   };
+		   oLis[4].onclick=function () {
+			   for (i=0;i<oLis.length;i++){
+			   oLis[i].style.backgroundColor="rgba(0,51,0,.3)";
+			   }
+			   oImg.src="images/ADs05.jpg";
+			   count=5;
+			   oLis[4].style.backgroundColor="rgba(153,255,0,.5)";
+			   };
+		   oLis[5].onclick=function () { 
+		       count--;	
+			   if (count==0) {count=5;};
+			   for (i=0;i<oLis.length;i++){
+			   oLis[i].style.backgroundColor="rgba(0,51,0,.3)";
+			   }		
+			   oImg.src= "images/ADs0" +count+".jpg";
+			   oLis[count-1].style.backgroundColor="rgba(153,255,0,.5)";
+			   };
+		   oLis[6].onclick=function () { 
+		       count++;
+			   if (count==6) {count=1;};
+			   for (i=0;i<oLis.length;i++){
+			   oLis[i].style.backgroundColor="rgba(0,51,0,.3)";
+			   }		
+			   oImg.src= "images/ADs0" +count+".jpg";
+			   oLis[count-1].style.backgroundColor="rgba(153,255,0,.5)";
+			   };				   
+		   var timer01 =setInterval (function () {
+			   count++;
+			   if (count ==6) {count = 1};
+			   for (i=0;i<oLis.length;i++){
+			   oLis[i].style.backgroundColor="rgba(0,51,0,.3)";
+			   }
+			   oImg.src= "images/ADs0" +count+".jpg";
+			   oLis[count-1].style.backgroundColor="rgba(153,255,0,.5)";
+			   },"5000"); // alert("页面加载了");	 
+		}
+		
+</script>
+</head>
+
+<body>
+    <div id="nTime">当前时间为：</div>
+    <div id="AD"> 
+    <a href="#"><img id="ADimg" src="images/ADs01.jpg"/> </a>
+        <ul>
+        <li class="moren">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        </ul>
+        <ol>
+        <li id="prev" class="hideprev"><<</li>
+        <li id="next" class="hidenext">>></li>
+        </ol>
+    </div>
+</body>
+</html>

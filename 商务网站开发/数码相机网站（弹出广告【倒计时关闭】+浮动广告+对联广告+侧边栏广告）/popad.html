@@ -1,0 +1,454 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>EC数码产品荟萃</title>
+
+<style type="text/css">
+<!--
+* { margin:0; }
+body { background:#fff; margin:0;}
+a img { border:none;}
+#wrap {
+	position:relative;
+	width:990px;
+	height:1120px;
+	margin:0 auto;
+}
+
+#Logo {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:130px;
+	height:105px;
+}
+
+#Banner {
+	position:absolute;
+	left:130px;
+	top:0px;
+	width:860px;
+	height:105px;
+}
+
+#Home {
+	position:absolute;
+	left:0px;
+	top:105px;
+	width:86px;
+	height:35px;
+	background:url(images/Home.jpg);
+}
+#Home a { display:block; width:86px; height:35px;}
+#Home a:hover { background:url(images/Home2.jpg);}
+#Home a:active { background:url(images/Home1.jpg);}
+
+#Introduction {
+	position:absolute;
+	left:86px;
+	top:105px;
+	width:129px;
+	height:35px;
+}
+
+#DVC {
+	position:absolute;
+	left:215px;
+	top:105px;
+	width:252px;
+	height:35px;
+}
+
+#DC {
+	position:absolute;
+	left:467px;
+	top:105px;
+	width:129px;
+	height:35px;
+}
+
+#Others {
+	position:absolute;
+	left:596px;
+	top:105px;
+	width:129px;
+	height:35px;
+}
+
+#Communicting {
+	position:absolute;
+	left:725px;
+	top:105px;
+	width:129px;
+	height:35px;
+}
+
+#Contacting {
+	position:absolute;
+	left:854px;
+	top:105px;
+	width:136px;
+	height:35px;
+}
+
+#Leaddigital {
+	position:absolute;
+	left:0px;
+	top:150px;
+	width:660px;
+	height:215px;
+}
+
+#Notice {
+	position:absolute;
+	left:670px;
+	top:150px;
+	width:320px;
+	height:40px;
+}
+
+#Noticetext {
+	position:absolute;
+	left:670px;
+	top:190px;
+	width:318px;
+	height:219px;
+	border:1px solid #000; border-top:none;
+	background:url(images/nbg.jpg);
+}
+
+#Leadtext {
+	position:absolute;
+	left:0px;
+	top:365px;
+	width:658px;
+	height:103px;
+	border:1px solid #000;
+}
+#Leadtext h2 { font:20px/1.6em 微软雅黑; color:#1e1c1c;
+               margin-left:15px;
+			   letter-spacing:2px;}
+#Leadtext p { font:16px/1.4em 微软雅黑; colot:#222222;
+               margin-left:15px;
+			   letter-spacing:1px;}
+
+
+#ADs {
+	position:absolute;
+	left:670px;
+	top:420px;
+	width:320px;
+	height:590px;
+}
+
+#Digital1 {
+	position:absolute;
+	left:0px;
+	top:480px;
+	width:325px;
+	height:155px;
+}
+
+#Digital2 {
+	position:absolute;
+	left:335px;
+	top:480px;
+	width:325px;
+	height:155px;
+}
+
+#D1text {
+	position:absolute;
+	left:0px;
+	top:635px;
+	width:325px;
+	height:105px;
+}
+
+#D2text {
+	position:absolute;
+	left:335px;
+	top:635px;
+	width:325px;
+	height:105px;
+}
+
+#Digital3 {
+	position:absolute;
+	left:0px;
+	top:750px;
+	width:325px;
+	height:155px;
+}
+
+#Digital4 {
+	position:absolute;
+	left:335px;
+	top:750px;
+	width:325px;
+	height:155px;
+}
+
+#D3text {
+	position:absolute;
+	left:0px;
+	top:905px;
+	width:325px;
+	height:105px;
+}
+
+#D4text {
+	position:absolute;
+	left:335px;
+	top:905px;
+	width:325px;
+	height:105px;
+}
+
+#Footer {
+	position:absolute;
+	left:0px;
+	top:1020px;
+	width:990px;
+	height:100px;
+}
+#PopupAD { width:900px; height:400px;
+           border:1px solid #ccc; border-radius:5px;
+		   background:rgba(0,102,51,.6);
+		   position:absolute; top:50px; left:45px; text-align:center;
+		   display:none;}
+#PopupAD a { font:30px 微软雅黑; color:lightyellow;
+             text-decoration:none;}	
+#PopupAD button { width:30px; height:30px; font-size:28px;
+                  text-align:center; line-height:28px;
+				  padding:1px 0 0 2px;
+				  border:1px solid #bbb; border-radius:3px;
+				  background:rgba(200,200,200,0.1);
+				  color:#fff; 
+				  position:absolute; right:5px; bottom:5px;}
+				  
+  #lcoup, #rcoup { width:150px; height:470px;
+                   border:1px solid #ddd;
+				   position:fixed; }	
+  #couplet button { border:1px solid #ccc; 
+                    background:rgba(102,102,102,.2);
+					width:18px; height:18px;
+					font-size:16px;
+					text-align:center; line-height:16px;
+					padding:0px 0px 2px 2px;}   
+  #lcoup { top:30px; left:5px;}
+  #rcoup { top:30px; right:5px;}
+  #lcoup label { float:right;}
+  
+  
+  #floatAD {width:150px;height:100px;
+            border:1 solid #ddd;
+			border-radius:5px;
+			position:absolute;left:200px;top:500px;
+			opacity:0.8;}
+  #floatAD img {width:150px;height:100px;}		    
+-->
+</style>
+<script type="text/javascript">
+    window.onload = 
+	   function () {
+		  //alert("页面已经加载！"); 
+		  setTimeout( "document.getElementById('PopupAD').style.display = 'block';",1500 );
+		  document.getElementById("PopupAD").getElementsByTagName("button")[0].onclick=
+		     function () {
+				document.getElementById('PopupAD').style.display = 'none'; 
+			  }
+		  setTimeout( "document.getElementById('PopupAD').style.display = 'none';",8000 ); 
+		  
+		  
+		  document.getElementById("couplet").getElementsByTagName("label")[0].onclick = 
+		       function () {
+				   document.getElementById("couplet").style.display = "none";   
+				} 
+		   document.getElementById("couplet").getElementsByTagName("label")[1].onclick = 
+		        function () {
+				   document.getElementById("couplet").style.display = "none";   
+				}
+	    //浮动广告代码部分
+		var oDiv = document.getElementById("floatAD");
+		var timer01 = null;
+		var sts = "rd";
+		timer01 = setInterval(function () {
+			switch (sts) {
+				case "rd":
+				    oDiv.style.left=oDiv.offsetLeft + 1 +"px";
+				    oDiv.style.top=oDiv.offsetTop + 1 +"px";
+				    if (oDiv.offsetTop >= window.innerHeight - 100){
+					   sts="ru";
+					}else if (oDiv.offsetLeft >= window.innerWidth-150) {
+						sts="ld";
+					}
+						else  {	
+					};
+				    break;
+					
+				case "ru":
+				    oDiv.style.left=oDiv.offsetLeft + 1 +"px";
+				    oDiv.style.top=oDiv.offsetTop - 1 +"px";
+				    if (oDiv.offsetLeft >= window.innerWidth - 150){
+					    sts="lu";
+					}else if (oDiv.offsetTop >= window.innerHeight - 100) {
+						sts="rd";
+					}else if (oDiv.offsetTop <=0) {
+						sts="rd";
+					}
+						else {
+							}
+				    break;
+					
+				case "lu":
+				    oDiv.style.left=oDiv.offsetLeft - 1 +"px";
+				    oDiv.style.top=oDiv.offsetTop - 1 +"px";
+					if (oDiv.offsetTop <=0){
+					    sts="ld";
+					}else if (oDiv.offsetLeft <=0 ){
+						sts="ru";
+						}
+					else{
+						}
+				    break;
+					
+				case "ld":
+				    oDiv.style.left=oDiv.offsetLeft - 1 +"px";
+				    oDiv.style.top=oDiv.offsetTop + 1 +"px";
+					if (oDiv.offsetLeft <=0){
+					    sts="rd";
+					}else if (oDiv.offsetTop >= window.innerHeight - 100 ){
+						sts="lu";
+						}else{
+						}
+					     
+				    break;
+				
+				}
+			
+			},1)
+		}
+</script>
+
+</head>
+<body>
+
+<div id="wrap">
+	<div id="Logo">
+		<a href="#">
+			<img src="images/Logo.jpg" alt="数码产品汇集"></a>
+	</div>
+	<div id="Banner">
+		<a href="#">
+			<img src="images/Banner.jpg"  alt=""></a>
+	</div>
+	<div id="Home">
+		<a href="#">
+			<img src="images/Home.png"></a>
+	</div>
+	<div id="Introduction">
+		<a href="#">
+			<img src="images/Introduction.jpg" ></a>
+	</div>
+	<div id="DVC">
+		<a href="#">
+			<img src="images/DVC.jpg" ></a>
+	</div>
+	<div id="DC">
+		<a href="#">
+			<img src="images/DC.jpg" ></a>
+	</div>
+	<div id="Others">
+		<a href="#">
+			<img src="images/Others.jpg" ></a>
+	</div>
+	<div id="Communicting">
+		<a href="#">
+			<img src="images/Communicting.jpg" ></a>
+	</div>
+	<div id="Contacting">
+		<a href="#">
+			<img src="images/Contacting.jpg"></a>
+	</div>
+	<div id="Leaddigital">
+		<a href="#">
+			<img src="images/Leaddigital.jpg"  alt="索尼HDV数码摄像机"></a>
+	</div>
+	<div id="Notice">
+		<img src="images/Notice.jpg">
+	</div>
+	<div id="Noticetext">
+		<p>
+        主题库和快速样式库都提供了重置命令，因而您总是能够将文档外观还原为当前模板所包含的原始外观。对于“插入”选项卡上的库，在设计时都充分考虑了其中的项与文档整体外观的协调性。
+        </p>
+	</div>
+	<div id="Leadtext">
+	  	<h2>索尼HDV数码摄像机</h2>
+        <p>
+       对于“插入”选项卡上的库，在设计时都充分考虑了其中的项与文档整体外观的协调性。 您可以使用这些库来插入表格、页眉、页脚、列表、封面以及其他文档构建基块......<a href="#">详细</a> 
+        </p>
+	</div>
+	<div id="ADs">
+		<img src="images/ADs.jpg" >
+	</div>
+	<div id="Digital1">
+		<a href="#">
+			<img src="images/Digital1.jpg"  alt="尼康数码相机"></a>
+	</div>
+	<div id="Digital2">
+		<a href="#">
+			<img src="images/Digital2.jpg"  alt="佳能数码相机"></a>
+	</div>
+	<div id="D1text">
+		<img src="images/D1text.gif" >
+	</div>
+	<div id="D2text">
+		<img src="images/D2text.gif" >
+	</div>
+	<div id="Digital3">
+		<a href="#">
+			<img src="images/Digital3.jpg"  alt="索尼数码相机"></a>
+	</div>
+	<div id="Digital4">
+		<a href="#">
+			<img src="images/Digital4.jpg" alt="三星数码相机"></a>
+	</div>
+	<div id="D3text">
+		<img src="images/D3text.gif" >
+	</div>
+	<div id="D4text">
+		<img src="images/D4text.gif" >
+	</div>
+	<div id="Footer">
+		<img src="images/Footer.jpg">
+	</div>
+    
+    <!-- 弹出广告结构部分 -->
+    <div id="PopupAD">
+       <p>
+          <img src="images/dcad.png"><br>
+          <a href="#">品牌数码相机促销中.....</a>
+       </p>
+       <button>&times;</button>
+    </div>   
+</div>
+    
+    <!-- 对联广告结构部分 -->
+    <div id="couplet">
+        <div id="lcoup">
+            <label><button>&times;</button>关闭</label>
+            <img src="images/coupletl.jpg">
+        </div>
+        <div id="rcoup">
+            <label><button>&times;</button>关闭</label>
+            <img src="images/coupletr.jpg">
+        </div>
+    </div>
+    <!--浮动广告 -->
+    <div id="floatAD">
+       <a href="#"><img src="images/floatAD.gif"></a>
+    </div>
+</body>
+</html>

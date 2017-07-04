@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css3部分</title>\
+<style type="text/css">
+nav ul {
+	margin:0px;
+	padding:0px;
+	list-style:none;}
+nav li{
+	float:left;
+	}
+nav li a {
+	width:90px;
+	height:40px;
+	text-align:center;
+	font:19px/40px 微软雅黑;color:#090;
+	display:block;
+	text-decoration:none;
+	border:8px solid #090;
+	margin-right:20px;
+	border-top-left-radius:10px;
+	border-bottom-right-radius:10px;
+	box-shadow:2px 1px 3px red,-2px -2px 3px cyan,
+	inset 2px 2px 2px blue,inset 2px 2px 2px #666;/*阴影负值则在上面，inset表示内部*/
+	transition:1s ease-in;}/*1秒越来越快放大*/
+nav a:hover {
+	color:red;
+	/*transform:scale(1.2);    放大1.2倍*/
+	/*transform:rotate(30deg);   旋转30度*/
+	/*transform:skew(30deg,60deg);  扭曲左，右*/
+	/*transform:translate(10px,50px);  移动向左10px，向下50px*/
+	transform:perspective(100px) rotateY(45deg); /* 透视像素越大透视夸张度越小，Y轴旋转45度*/
+	}
+
+</style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">美团</a></li>
+            <li><a href="#">百度糯米</a></li>
+            <li><a href="#">窝窝团</a></li>
+            <li><a href="#">聚划算</a></li>
+            <li><a href="#">京东团购</a></li>
+            <li><a href="#">其他团购</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

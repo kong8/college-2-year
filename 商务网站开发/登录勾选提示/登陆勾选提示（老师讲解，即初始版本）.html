@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>显示隐藏信息</title>
+<style type="text/css">
+    section {
+	    width:300px;
+        height:200px;
+        background:#eee;
+	    }
+	button {
+		width:290px;
+		height:33px;
+		border:none;
+		background:rgba(255,0,0,0.8);
+		}
+	#tishi {
+		font:15px "微软雅黑";
+		line-height:1.1em;
+		color:#777;
+		}
+	#msg {
+		width:160px;
+		height:40px;
+		background:rgba(255,255,0,.8);
+		font:13px 微软雅黑;
+		color:red;
+		border:2px solid #ff0000;
+		border-radius:1px;
+		padding:1px 2px;
+		position:absolute;
+		left:130px;
+		top:5px;
+		letter-spacing:1px;
+		display:none;
+        }
+</style>
+<script type="text/javascript">
+    function showMsg() {
+		document.getElementById("msg").style.display="block";
+		}
+    function hideMsg() {
+		document.getElementById("msg").style.display="none";
+		}
+	function chang(){
+		if (document.getElementById("che").checked) {
+			document.getElementById("msg").style.display="block";
+			}else{
+				document.getElementById("msg").style.display="none";
+				}
+		}
+</script>
+</head>
+
+<body>
+    <section>
+        <label id="tishi" >
+            <input type="checkbox" id="che" onChange="chang();"/>30天内自动登录
+        </label>
+        <button>登录</button>
+        <div id="msg">
+         建议不要再网吧，办公室等公共场所选择按钮。
+        </div>
+    </section>
+</body>
+</html>

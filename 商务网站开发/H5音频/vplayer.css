@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+#vwrap {
+	width:566px;
+    height:350px;
+    background:url(images/css3bg02.png);
+	border:10px solid #33c;
+	border-radius:8px;
+	box-shadow:inset 2px 2px 1px yellow,
+	           inset -2px -2px -1px yellow,
+			   1px 2px 2px #888;
+	margin:10px auto;
+	text-align:center;}
+#vwrap video {
+	width:560px;
+	height:315px;
+	}
+controls {
+	display:block;
+	height:25px;
+	margin-top:1px;}
+controls #Btns{
+	width:56px;
+	height:25px;
+	float:left;
+	}
+#Btns button {
+	width:50px;
+    height:25px;
+	font:15px/1em 微软雅黑;
+    border:1px solid darkgreen;
+    border-radius:3px;
+    color:darkgreen;
+    letter-spacing:0.1em;
+    float:left;
+	}
+#Bar {
+	width:400px;
+    height:14px;
+    background:yellow;
+	float:left;
+	border:1px solid darkgreen;padding:3px 1px;margin-top:1px;
+	position:relative;
+	}
+#jdBar {
+	width:1px;
+    height:14px;
+    background:green;
+	position:absolute;}
+#dqTime {
+	font:15px/1em;
+    color:darkgreen;}

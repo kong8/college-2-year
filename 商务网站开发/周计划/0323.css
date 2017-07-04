@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+    *{ margin:0px;padding:0px;}
+    #wrap {
+		width:325px;
+        height:330px;
+	    background:rgba(255,255,0,.1);
+	    border:1px solid #ccc;
+	    margin:5px auto;
+	       }
+    ul li {
+	      list-style-type:none;
+	      width:80px;
+	      height:80px;
+	      border:1px solid #ccc;
+	      border-radius:5px;
+		  float:left;
+		  margin-left:20px;
+		  margin-top:20px;}
+	#wrap ul h2 {
+		         font:20px 微软雅黑;
+				 padding-top:10px;
+				 text-align:center;
+	            }
+	#wrap ul p  {
+		         font:900 18px 微软雅黑;
+				 padding-top:5px;
+				 text-align:center;
+	             color:#888;}
+	#wrap div {
+		      border:1px solid #ccc;
+			  border-radius:5px;
+			  background:rgba(0,255,0,.15);
+			  width:285px;
+			  height:95px;
+			  float:left;
+			  margin-left:20px;
+			  margin-top:20px;
+			  }
+	#wrap div h2 {
+		         font:900 18px 微软雅黑;
+				 padding-top:10px;
+				 text-align:center;
+	            }
+	#wrap div p  {
+		         font:900 16px 微软雅黑;
+				 padding-left:10px;
+				 padding-top:5px;
+	             color:#444;}
+	.liactive {
+		       background:rgba(0,255,0,.15);
+			   }
+	.linormal{
+		background:#ccc;}

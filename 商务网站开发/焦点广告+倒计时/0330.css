@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+    #nTime { font:14px 微软雅黑; 
+	         color:#333;
+			 margin:5px auto;
+	         width:660px;}
+    #AD { 
+	         width:660px;height:215px;
+             border:1px solid #888;
+		     margin:5px auto;
+		     position:relative;}
+    #AD img { width:660px; height:215px; 
+			  border:none;}
+	#AD ul { 
+	         list-style-type:none;
+	         margin:0; padding:0;
+	         position:absolute;
+			 right:0; bottom:0;}
+	#AD ol {list-style-type:none;margin:0px;padding:0px;}
+    #AD ul li { 
+	         border:1px solid #888;
+	         border-radius:15px;
+	         width:30px; height:30px;
+			 color:#CCC;
+			 background:rgba(0,51,0,.3);
+			 text-align:center; line-height:30px;
+			 float:left;
+			 margin-right:5px; margin-bottom:5px;
+			 }
+	#AD ol li {
+		     border:1px solid #888;
+	         border-radius:15px;
+	         width:30px; height:30px;
+			 color:#CCC;
+			 background:rgba(0,51,0,.3);
+			 text-align:center; line-height:30px;
+			 float:left;}
+	.hideprev{
+		      position:absolute;
+	          top:80px;
+			  left:5px;
+			  display:none;}
+	.hidenext{
+		      position:absolute;
+	          top:80px;
+			  right:5px;
+			  display:none;}
+	.showprev{
+		      position:absolute;
+	          top:80px;
+			  left:5px;
+			  display:block;}
+	.shownext{
+		      position:absolute;
+	          top:80px;
+			  right:5px;
+			  display:block;}
+	#AD ul li.moren{
+		background:rgba(153,255,0,.5);}
